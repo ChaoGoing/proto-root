@@ -1,0 +1,9 @@
+syntax = "proto3";
+package pb;
+
+message EventCsStatOverviewChange {
+  uint32 work_cnt = 1; // 当前在线客服
+  uint32 serving_cnt = 2;// 当前总接待客户
+  uint32 waiting_cnt = 3;//  等待接待客户
+  string msg = 4; // 信息（无用字段）
+}

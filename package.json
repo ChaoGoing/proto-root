@@ -1,0 +1,17 @@
+{
+  "name": "proto-root",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ChaoGoing/proto-root.git",
+  "author": "陈子超 <chenzichao@ydjdev.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@rollup/plugin-replace": "^4.0.0",
+    "protobufjs": "^6.11.3",
+    "rollup": "^2.75.6"
+  },
+  "scripts": {
+    "proto:cim": "pbjs --keep-case -t json-module -w commonjs -o src/cim/proto.js src/protos/*.proto && pbjs --keep-case --force-number -t static-module src/protos/*.proto | pbts -o src/main/services/protobuf/proto.d.ts -",
+    "proto:taro": "pbjs --keep-case -t json-module -w commonjs -o src/taro/proto.json src/protos/*.proto && pbjs --keep-case --force-number -t static-module src/protos/*.proto | pbts -o src/main/services/protobuf/proto.d.ts -"
+  }
+}

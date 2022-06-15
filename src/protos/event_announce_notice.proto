@@ -1,0 +1,6 @@
+syntax = "proto3";
+package pb;
+
+message EventAnnounceNotice {
+  int32 type = 1; // 宣发类型
+}
